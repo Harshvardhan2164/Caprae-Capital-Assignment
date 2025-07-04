@@ -465,12 +465,12 @@
             }
             emailResult.innerHTML = emailHTML || '<p class="text-muted">No emails found</p>';
             
-            // Geo expansion results
-            regionBadge.textContent = data.geo_expansion.length ? 
-                data.geo_expansion[0].country + ' Region' : 'Global';
+            // Location results
+            regionBadge.textContent = data.location.length ? 
+                data.location[0].country + ' Region' : 'Global';
             
             let geoHTML = '';
-            data.geo_expansion.forEach(company => {
+            data.location.forEach(company => {
                 geoHTML += `
                     <div class="col-md-6 mb-3">
                         <div class="card company-card h-100">
