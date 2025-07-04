@@ -87,7 +87,7 @@ pip install -r requirements.txt
 To run the Flask application in development mode:
 
 ```bash
-python app.py
+waitress-serve --listen=127.0.0.1:5000 app:app
 ```
 
 The application will typically run on `http://127.0.0.1:5000`.
