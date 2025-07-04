@@ -9,4 +9,4 @@ RUN pip install -r requirements.txt
 COPY app.py .
 COPY utils/ ./utils/
 
-CMD ["python", "app.py"]
+CMD ["waitress-serve", "--listen=0.0.0.0:8000", "app:app"]
